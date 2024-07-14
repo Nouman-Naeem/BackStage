@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Backstage Talks</title>
+</head>
+<body>
+    <div class="header1">
+        <img width="60%" src="../images/logo.png" alt="logo">
+    </div>
+    <div class="header" data-color="lightyellow" >
+            <img width="40%" src="../images/img1.png" alt="img1">
+            <p>Issue #8</p><br>
+            <a href="#">BUY HERE</a><br>
+            <p>or in <a href="#">selected stores</a></p>
+    </div>
+    <div  class="header" data-color="pink" >
+        <img width="40%" src="../images/img2.png" alt="img2">
+        <p>Issue #7</p><br>
+            <p><a href="#">BUY HERE</a>(Europe)</p><br>
+            <p><a href="#">BUY HERE</a>(UK & Overseas)</p><br>  
+            <p>or in <a href="#">selected stores</a></p>
+    </div>
+    <div  class="header" data-color="white" >
+        <img width="40%" src="../images/img3.png" alt="img3">
+        <p>Issue #6</p><br>
+            <a href="#" style="color:#E66FB0;">BUY HERE</a><br>
+            <p>or in <a href="#" style="color: #E66FB0;">selected stores</a></p>
+    </div>
+    <div  class="header" data-color="lightgrey" >
+        <img width="40%" src="../images/img4.png" alt="img4">
+        <p>Issue #5</p><br>
+        <a href="#">BUY HERE</a><br>
+            <p>or in <a href="#">selected stores</a></p>
+    </div>
+    <div class="header" data-color="orange" >
+        <img width="40%" src="../images/img5.png" alt="img5">
+        <p>Issue #4 is Sold Out</p><br>
+            <p>If you are lucky, you may get the last pieces in <a href="#">selected stores</a>.</p>
+    </div>
+    <div class="header" data-color="yellow" >
+        <img width="40%" src="../images/img6.png" alt="img6">
+        <p>Issue #3 is Sold Out</p><br>
+            <p>If you are lucky, you may get the last pieces in <a href="#">selected stores</a>.</p>
+    </div>
+    <div  class="header" data-color="blue" >
+        <img width="40%" src="../images/img7.png" alt="img7">
+        <p>Issue #2</p><br>
+            <a href="#">BUY HERE</a><br>
+            <p>or in <a href="#">selected stores</a></p>
+    </div>
+    <div class="header" data-color="red">
+        <img width="40%" src="../images/img8.png" alt="img8">
+        <p>Issue #3 is Sold Out</p><br>      
+        <p>If you are lucky, you may get the last pieces in <a href="#">selected stores</a>.</p>
+
+        <div class="header" style="height: 10px; width: 320px; padding-top: 170px; text-align: left; margin-right: 60em;" >
+                <p>Backstage Talks is a magazine of casual, but in depth dialogues on design and business. Our 
+                decisions shape and influence this complex world—to have a chance to make the right ones, 
+                we need to talk.</p>
+                <p style="margin-right: 5em;">© 2024 <a href="#">Published by Büro Milk</a></p><br><br>
+                <p  style="margin-right: 12em;"><a href="#" style="color: black;">Privacy Policy</a></p>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        jQuery(function($){
+            $(window).scroll(function() {
+                var $window = $(window),
+                    $body = $('body'),
+                    $header = $('.header');
+
+                var scroll = $window.scrollTop() + ($window.height() / 3);
+
+                $header.each(function () {
+                    var $this = $(this);
+
+                    if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
+                        $body.removeClass(function (index, css) {
+                            return (css.match (/(^|\s)color-\S+/g) || []).join(' ');
+                        });
+
+                        $body.addClass('color-' + $this.data('color'));
+                    }
+                });
+
+            }).scroll();
+        });
+    </script>
+
+
+
+</body>
+</html>

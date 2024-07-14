@@ -1,0 +1,63 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.header1{
+    padding-top: 20px;
+    position: absolute;
+    left: 15px;
+    top: 0;
+    z-index: 2;
+}
+.header{
+    padding-top: 80px;
+    padding-bottom: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}   
+p{
+    font-size: 18px;
+    font-weight: bold;
+}
+a{
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.color-lightyellow{
+    background-color: #F6E0A4;
+}
+.color-pink{
+    background-color: #FF608C;
+}
+
+.color-white{
+    background-color: #FFFFFF;
+}
+
+.color-lightgrey{
+    background-color: #00C1B5;
+}
+
+.color-orange{
+    background-color: #FF6519;
+}
+.color-yellow{
+    background-color: #FFBE00;
+}
+.color-blue{
+    background-color: #1D3FBB;
+}
+
+.color-red{
+
+    background-color: #E30512;
+}
